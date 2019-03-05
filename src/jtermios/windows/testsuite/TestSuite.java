@@ -86,7 +86,7 @@ public class TestSuite {
 		dcb.Parity = NOPARITY;
 		dcb.XonChar = 0x11;
 		dcb.StopBits = ONESTOPBIT;
-		dcb.XonChar = 0x13;
+		dcb.XoffChar = 0x13;
 
 		check(SetCommState(hComm, dcb), "SetCommState ");
 

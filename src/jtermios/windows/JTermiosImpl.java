@@ -155,6 +155,8 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 						cfsetospeed(m_Termios, B9600);
 						m_Termios.c_cc[VTIME] = 0;
 						m_Termios.c_cc[VMIN] = 0;
+						m_Termios.c_cc[VSTART] = 0x11;
+						m_Termios.c_cc[VSTOP] = 0x13;
 						updateFromTermios(this);
 
 						WaitCommEventCancelObject = CreateEvent(null, false, false, null);
