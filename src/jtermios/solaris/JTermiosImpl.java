@@ -30,7 +30,6 @@
 package jtermios.solaris;
 
 import com.sun.jna.*;
-import com.sun.jna.ptr.IntByReference;
 import java.io.File;
 
 import java.util.*;

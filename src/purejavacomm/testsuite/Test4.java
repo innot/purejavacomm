@@ -29,9 +29,6 @@
  */
 package purejavacomm.testsuite;
 
-import purejavacomm.SerialPortEvent;
-import purejavacomm.SerialPortEventListener;
-
 public class Test4 extends TestBase {
 	private static Exception m_Exception = null;
 	private static Thread m_Receiver;

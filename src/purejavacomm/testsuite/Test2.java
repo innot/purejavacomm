@@ -29,7 +29,6 @@
  */
 package purejavacomm.testsuite;
 
-import java.util.Arrays;
 import java.util.Random;
 
 import purejavacomm.SerialPort;
@@ -65,7 +64,7 @@ public class Test2 extends TestBase {
 			m_Port.notifyOnOutputEmpty(true);
 			m_Port.setFlowControlMode(SerialPort.FLOWCONTROL_XONXOFF_IN + SerialPort.FLOWCONTROL_XONXOFF_OUT);
 			m_Port.setSerialPortParams(speed, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
-			final boolean[] stop = { false };
+//			final boolean[] stop = { false };
 			m_T0 = System.currentTimeMillis();
 			m_Port.addEventListener(new SerialPortEventListener() {
 				public void serialEvent(SerialPortEvent event) {

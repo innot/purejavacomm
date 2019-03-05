@@ -60,7 +60,6 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 		volatile COMSTAT m_COMSTAT = new COMSTAT();
 		volatile int[] m_ClearErr = { 0 };
 		volatile Memory m_RdBuffer = new Memory(2048);
-		volatile int[] m_RdErr = { 0 };
 		volatile int m_RdN[] = { 0 };
 		volatile OVERLAPPED m_RdOVL = new OVERLAPPED();
 		volatile HANDLE m_ReadCancelObject;
@@ -407,8 +406,6 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 				if (length == 0)
 					return 0;
 
-				int error;
-
 				if ((port.m_OpenFlags & O_NONBLOCK) != 0) {
 					clearCommErrors(port);
 					int available = port.m_COMSTAT.cbInQue;
@@ -522,8 +519,6 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 					if (length > room)
 						length = room;
 				}
-
-				int old_flag;
 
 				if (!ResetEvent(port.m_WrOVL.hEvent))
 					port.fail();

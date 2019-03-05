@@ -137,7 +137,6 @@ public class Test8 extends TestBase {
 								sent[i] = (byte) i;
 							m_Out = m_Port.getOutputStream();
 							m_In = m_Port.getInputStream();
-							long t0 = System.currentTimeMillis();
 							m_Out.write(sent);
 
 							int n = 0;

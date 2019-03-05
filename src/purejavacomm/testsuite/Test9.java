@@ -31,9 +31,6 @@ package purejavacomm.testsuite;
 
 import java.io.IOException;
 
-import purejavacomm.SerialPortEvent;
-import purejavacomm.SerialPortEventListener;
-
 public class Test9 extends TestBase {
 	static volatile boolean m_ReadThreadRunning;
 	static volatile int m_ReadBytes = 0;
@@ -70,7 +67,7 @@ public class Test9 extends TestBase {
 		try {
 			final int timeout = 100;
 			final int threshold = 100;
-			final int chunks = 16; // send the data in 16 chunks
+//			final int chunks = 16; // send the data in 16 chunks
 			begin("Test9 - treshold 100, timeout 100 ");
 			openPort();
 			m_Out = m_Port.getOutputStream();

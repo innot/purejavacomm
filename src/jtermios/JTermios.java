@@ -43,8 +43,6 @@ import com.sun.jna.Native;
 
 import java.util.*;
 
-import jtermios.windows.WinAPI.OVERLAPPED;
-
 /**
  * JTermios provides a limited cross platform unix termios type interface to
  * serial ports.

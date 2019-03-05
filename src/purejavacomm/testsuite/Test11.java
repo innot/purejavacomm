@@ -29,8 +29,6 @@
  */
 package purejavacomm.testsuite;
 
-import java.io.IOException;
-
 import purejavacomm.PureJavaSerialPort;
 import purejavacomm.SerialPortEvent;
 import purejavacomm.SerialPortEventListener;
@@ -57,7 +55,7 @@ public class Test11 extends TestBase {
 					m_ThreadRunning = true;
 					byte[] rxbuffer = new byte[1];
 					try {
-						int rxn = m_In.read(rxbuffer, 0, rxbuffer.length);
+						m_In.read(rxbuffer, 0, rxbuffer.length);
 					} catch (Exception e) {
 						m_ExitViaException = true;
 					}
