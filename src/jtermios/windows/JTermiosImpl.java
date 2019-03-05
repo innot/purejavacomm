@@ -1041,7 +1041,7 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 		java.util.Arrays.fill(p.bits, 0);
 	}
 
-	public int ioctl(int fd, int cmd, int[] arg) {
+	public int ioctl(int fd, int cmd, int ...arg) {
 		Port port = getPort(fd);
 		if (port == null)
 			return -1;
