@@ -157,7 +157,7 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
         public NativeLong tv_usec;
 
         @Override
-        protected List getFieldOrder() {
+        protected List<String> getFieldOrder() {
             return Arrays.asList(//
                     "tv_sec",//
                     "tv_usec"//
@@ -179,7 +179,7 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
         public short revents;
 
         @Override
-        protected List getFieldOrder() {
+        protected List<String> getFieldOrder() {
             return Arrays.asList(//
                     "fd",//
                     "events",//
@@ -204,7 +204,7 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 		public int[] fd_array = new int[(fd_count + NFBBITS - 1) / NFBBITS];
 
 		@Override
-		protected List getFieldOrder() {
+		protected List<String> getFieldOrder() {
 			return Arrays.asList(//
 					"fd_array"//
 			);
@@ -239,7 +239,7 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
         public int c_ospeed;
 
         @Override
-        protected List getFieldOrder() {
+        protected List<String> getFieldOrder() {
             return Arrays.asList(//
                     "c_iflag",//
                     "c_oflag",//

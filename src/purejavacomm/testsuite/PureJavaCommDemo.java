@@ -43,7 +43,7 @@ public class PureJavaCommDemo {
 		try {
 			System.out.println("PureJavaCommDemo");
 			CommPortIdentifier portid = null;
-			Enumeration e = CommPortIdentifier.getPortIdentifiers();
+			Enumeration<CommPortIdentifier> e = CommPortIdentifier.getPortIdentifiers();
 			while (e.hasMoreElements()) {
 				portid = (CommPortIdentifier) e.nextElement();
 				System.out.println("found " + portid.getName());

@@ -86,7 +86,7 @@ public class CommPortIdentifier {
 				if (portid.getName().equals(portName))
 					return portid;
 			if (ENUMERATE) { // enumerating ports takes time, lets see if we can avoid it
-				Enumeration e = getPortIdentifiers();
+				Enumeration<CommPortIdentifier> e = getPortIdentifiers();
 				while (e.hasMoreElements()) {
 					CommPortIdentifier portid = (CommPortIdentifier) e.nextElement();
 					if (portid.getName().equals(portName))
@@ -190,7 +190,7 @@ public class CommPortIdentifier {
 	public static Enumeration<CommPortIdentifier> getPortIdentifiers() {
 		synchronized (m_Mutex) {
 
-			return new Enumeration() {
+			return new Enumeration<CommPortIdentifier>() {
 				List<CommPortIdentifier> m_PortIDs;
 				{ // insert the  'addPortName' ports to the dynamic port list
 					m_PortIDs = new LinkedList<CommPortIdentifier>();
@@ -208,7 +208,7 @@ public class CommPortIdentifier {
 					return m_Iterator != null ? m_Iterator.hasNext() : false;
 				}
 
-				public Object nextElement() {
+				public CommPortIdentifier nextElement() {
 					return m_Iterator.next();
 				};
 			};

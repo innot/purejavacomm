@@ -30,6 +30,7 @@
 
 package purejavacomm;
 
+@SuppressWarnings("serial")
 public class PortInUseException extends Exception {
 	public String currentOwner;
 

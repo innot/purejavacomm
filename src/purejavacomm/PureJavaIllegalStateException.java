@@ -1,5 +1,6 @@
 package purejavacomm;
 
+@SuppressWarnings("serial")
 public class PureJavaIllegalStateException extends IllegalStateException {
 
 	public PureJavaIllegalStateException(String message) {

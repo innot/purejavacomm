@@ -35,7 +35,6 @@ import purejavacomm.CommPortIdentifier;
 
 public class Test16 extends TestBase {
 
-	@SuppressWarnings("unchecked")
 	static void run() throws Exception {
 
 		Enumeration<CommPortIdentifier> cpiEnum;

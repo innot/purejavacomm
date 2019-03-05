@@ -398,7 +398,9 @@ public class WinAPI {
 		return (s << 10) | p;
 	}
 
+	@SuppressWarnings("serial")
 	public static class ULONG_PTR extends IntegerType {
+
 		public ULONG_PTR() {
 			this(0);
 		}
@@ -446,7 +448,7 @@ public class WinAPI {
 		public HANDLE hEvent;
 
 		@Override
-		protected List getFieldOrder() {
+		protected List<String> getFieldOrder() {
 			return Arrays.asList("Internal",//
 					"InternalHigh",//
 					"Offset",//
@@ -472,7 +474,7 @@ public class WinAPI {
 		public boolean bInheritHandle;
 
 		@Override
-		protected List getFieldOrder() {
+		protected List<String> getFieldOrder() {
 			return Arrays.asList("nLength",//
 					"lpSecurityDescriptor",//
 					"bInheritHandle"//
@@ -512,7 +514,7 @@ public class WinAPI {
 		public short wReserved1;
 
 		@Override
-		protected List getFieldOrder() {
+		protected List<String> getFieldOrder() {
 			return Arrays.asList("DCBlength",//
 					"BaudRate",//
 					"fFlags",//
@@ -547,7 +549,7 @@ public class WinAPI {
 		public int WriteTotalTimeoutConstant;
 
 		@Override
-		protected List getFieldOrder() {
+		protected List<String> getFieldOrder() {
 			return Arrays.asList("ReadIntervalTimeout",//
 					"ReadTotalTimeoutMultiplier",//
 					"ReadTotalTimeoutConstant",//
@@ -578,7 +580,7 @@ public class WinAPI {
 		public int cbOutQue;
 
 		@Override
-		protected List getFieldOrder() {
+		protected List<String> getFieldOrder() {
 			return Arrays.asList("fFlags",//
 					"cbInQue",//
 					"cbOutQue"//

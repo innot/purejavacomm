@@ -40,6 +40,7 @@ import purejavacomm.NoSuchPortException;
 import purejavacomm.SerialPort;
 
 public class TestBase {
+	@SuppressWarnings("serial")
 	static class TestFailedException extends Exception {
 
 	}

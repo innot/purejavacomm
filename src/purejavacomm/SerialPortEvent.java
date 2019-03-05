@@ -32,6 +32,7 @@ package purejavacomm;
 
 import java.util.EventObject;
 
+@SuppressWarnings("serial")
 public class SerialPortEvent extends EventObject {
 	/**
 	 * Data available at the serial port.

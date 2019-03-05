@@ -249,6 +249,7 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 
 	};
 
+	@SuppressWarnings("serial")
 	static class Fail extends Exception {
 
 	}
